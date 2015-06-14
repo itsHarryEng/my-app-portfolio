@@ -1,100 +1,77 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#ffdfeaf1">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical">
 
-    <TextView android:text="@string/my_title" android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/my_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="#ff15153c"
-        android:id="@+id/my_title" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/my_title"
+        android:textColor="@color/dark_blue"
+        android:textSize="20sp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/media_streamer"
         android:id="@+id/media_streamer"
-        android:background="#F08C35"
-        android:layout_above="@+id/super_duo1"
-        android:layout_alignLeft="@+id/my_title"
-        android:layout_alignStart="@+id/my_title"
-        android:layout_alignRight="@+id/my_title"
-        android:layout_alignEnd="@+id/my_title"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:textColor="#ffffffff" />
+        android:background="@color/orange"
+        android:text="@string/media_streamer"
+        android:textColor="@color/white" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/super_duo1"
         android:id="@+id/super_duo1"
-        android:background="#F08C35"
-        android:layout_above="@+id/super_duo2"
-        android:layout_alignLeft="@+id/media_streamer"
-        android:layout_alignStart="@+id/media_streamer"
-        android:layout_alignRight="@+id/media_streamer"
-        android:layout_alignEnd="@+id/media_streamer"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:textColor="#ffffffff" />
+        android:background="@color/orange"
+        android:text="@string/super_duo1"
+        android:textColor="@color/white" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/super_duo2"
         android:id="@+id/super_duo2"
-        android:background="#F08C35"
-        android:layout_above="@+id/ant_terminator"
-        android:layout_alignLeft="@+id/super_duo1"
-        android:layout_alignStart="@+id/super_duo1"
-        android:layout_alignRight="@+id/super_duo1"
-        android:layout_alignEnd="@+id/super_duo1"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="10dp"
-        android:textColor="#ffffffff" />
+        android:background="@color/orange"
+        android:text="@string/super_duo2"
+        android:textColor="@color/white" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/ant_terminator"
         android:id="@+id/ant_terminator"
-        android:background="#F08C35"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/super_duo2"
-        android:layout_alignStart="@+id/super_duo2"
-        android:layout_alignRight="@+id/super_duo2"
-        android:layout_alignEnd="@+id/super_duo2"
-        android:textColor="#ffffffff" />
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/orange"
+        android:text="@string/ant_terminator"
+        android:textColor="@color/white" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/materialize"
         android:id="@+id/materialize"
-        android:background="#F08C35"
-        android:layout_below="@+id/ant_terminator"
-        android:layout_alignLeft="@+id/ant_terminator"
-        android:layout_alignStart="@+id/ant_terminator"
-        android:layout_alignRight="@+id/ant_terminator"
-        android:layout_alignEnd="@+id/ant_terminator"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:textColor="#ffffffff" />
+        android:background="@color/orange"
+        android:text="@string/materialize"
+        android:textColor="@color/white" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="42sp"
-        android:text="@string/capstone"
         android:id="@+id/capstone"
-        android:background="#ff273e54"
-        android:layout_below="@+id/materialize"
-        android:layout_alignLeft="@+id/materialize"
-        android:layout_alignStart="@+id/materialize"
-        android:layout_alignRight="@+id/materialize"
-        android:layout_alignEnd="@+id/materialize"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:textColor="#ffffffff" />
+        android:background="@color/dark_blue"
+        android:text="@string/capstone"
+        android:textColor="@color/white" />
 
-</RelativeLayout>
+</LinearLayout>

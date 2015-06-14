@@ -1,11 +1,17 @@
 package com.harryeng.android.myappportfolio;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -75,10 +81,30 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            AboutDialog aboutDialog = new AboutDialog();
+            aboutDialog.show(getSupportFragmentManager(), null);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public static class AboutDialog extends DialogFragment {
+        @NonNull
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the Builder class for convenient dialog construction
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            TextView about = new TextView(getActivity());
+            about.setText(R.string.app_name);
+            about.setGravity(Gravity.CENTER);
+            about.setTextColor(getResources().getColor(R.color.dark_blue));
+            about.setTextSize(20);
+            about.setPadding(0, 30, 0, 0);
+            builder.setView(about).setPositiveButton(R.string.okay, null);
+            // Create the AlertDialog object and return it
+            return builder.create();
+        }
     }
 }
